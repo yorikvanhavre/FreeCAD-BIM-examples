@@ -32,7 +32,7 @@ for fcstd in [f for f in  os.listdir() if f.endswith(".FCStd")]:
     thumb.close()
     
 # create the montage
-command = "montage -background #ffffff -fill #000000 -label '%f' -font Helvetica -pointsize 10 -define png:size=128x128 -geometry 128x128+2+2 -auto-orient -tile 6x *.png contact-sheet.jpg"
+command = "montage -background #ffffff -fill #000000 -label %f -font Helvetica -pointsize 10 -define png:size=128x128 -geometry 128x128+2+2 -auto-orient -tile 6x *.png contact-sheet.jpg"
 subprocess.run(command.split(" "))
     
 # delete intermediary files
